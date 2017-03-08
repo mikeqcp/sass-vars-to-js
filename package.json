@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
-    "dev": "babel src --presets babel-preset-es2015 --out-dir dist --watch",
+    "build": "babel src --presets babel-preset-es2015 --out-dir lib",
+    "dev": "babel src --presets babel-preset-es2015 --out-dir lib --watch",
     "test": "mocha --compilers js:babel-core/register ./test/**/*.spec.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
